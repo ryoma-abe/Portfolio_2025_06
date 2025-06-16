@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteInfo from '../data/siteInfo.json';
+
+const { contact, social } = siteInfo;
+---
+
+<Layout title="Contact">
+  <section class="py-16 md:py-24 lg:py-32 relative">
+    <!-- Top decorative line -->
+    <div class="absolute top-0 left-0 right-0 h-px bg-gray-200 dark:bg-gray-700"></div>
+    
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
+      <div class="flex items-center gap-4 md:gap-8 mb-12 md:mb-16">
+        <h1 class="text-xs font-semibold tracking-[0.3em] text-code font-mono">
+          // GET_IN_TOUCH
+        </h1>
+        <div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-light text-primary dark:text-dark-primary mb-8">
+            お気軽に<br />お問い合わせください
+          </h2>
+          <p class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed mb-12">
+            プロジェクトのご相談、お見積もりのご依頼など、
+            どんなことでもお気軽にお問い合わせください。
+            2営業日以内にご返信いたします。
+          </p>
+          
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xs font-semibold tracking-wider text-code mb-2 font-mono">// EMAIL</h3>
+              <a href={`mailto:${contact.email}`} class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent dark:hover:text-accent transition-colors duration-300">{contact.email}</a>
+            </div>
+            <div>
+              <h3 class="text-xs font-semibold tracking-wider text-code mb-2 font-mono">// SOCIAL</h3>
+              <div class="flex flex-wrap gap-4 md:gap-6">
+                {social.map((link) => (
+                  <a 
+                    href={link.url} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent transition-colors duration-300"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="space-y-8"
+          >
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            
+            <div>
+              <label for="name" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+                NAME *
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                class="w-full px-0 py-4 border-0 border-b border-gray-200 dark:border-gray-600 focus:border-primary focus:ring-0 transition-colors duration-300 bg-transparent text-sm text-primary dark:text-dark-primary placeholder-gray-400 dark:placeholder-gray-500 min-h-[44px]"
+                placeholder="お名前"
+              />
+            </div>
+            
+            <div>
+              <label for="email" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+                EMAIL *
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                class="w-full px-0 py-4 border-0 border-b border-gray-200 dark:border-gray-600 focus:border-primary focus:ring-0 transition-colors duration-300 bg-transparent text-sm text-primary dark:text-dark-primary placeholder-gray-400 dark:placeholder-gray-500 min-h-[44px]"
+                placeholder="メールアドレス"
+              />
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+                SUBJECT *
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                class="w-full px-0 py-4 border-0 border-b border-gray-200 dark:border-gray-600 focus:border-primary focus:ring-0 transition-colors duration-300 bg-transparent text-sm text-primary dark:text-dark-primary placeholder-gray-400 dark:placeholder-gray-500 min-h-[44px]"
+                placeholder="件名"
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+                MESSAGE *
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+                class="w-full px-0 py-3 border-0 border-b border-gray-200 dark:border-gray-600 focus:border-primary focus:ring-0 transition-colors duration-300 bg-transparent text-sm resize-none text-primary dark:text-dark-primary placeholder-gray-400 dark:placeholder-gray-500"
+                placeholder="メッセージ"
+              ></textarea>
+            </div>
+            
+            <div class="pt-4">
+              <button
+                type="submit"
+                class="text-sm font-medium tracking-wider text-primary dark:text-dark-primary border border-primary dark:border-dark-primary px-8 py-4 hover:bg-primary hover:text-white dark:hover:bg-dark-primary dark:hover:text-dark-bg transition-all duration-300 flex items-center gap-2"
+              >
+                <span class="font-mono">{'<'}</span>
+                SEND MESSAGE
+                <span class="font-mono">{'>'}</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

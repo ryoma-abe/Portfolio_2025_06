@@ -1,0 +1,28 @@
+{
+  "contact": {
+    "email": "webchaleur@gmail.com",
+    "location": "十勝, Japan"
+  },
+  "social": [
+    {
+      "name": "X",
+      "url": "https://x.com/ryoo_black",
+      "icon": "x"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/ryoma-abe",
+      "icon": "github"
+    },
+    {
+      "name": "Blog",
+      "url": "https://www.ryoma.online/",
+      "icon": "link"
+    }
+  ],
+  "company": {
+    "name": "RyomaAbe",
+    "tagline": "Frontend Developer",
+    "copyright": "© 2024 RyomaAbe. All rights reserved."
+  }
+}

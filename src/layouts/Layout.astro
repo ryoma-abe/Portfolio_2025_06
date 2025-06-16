@@ -1,0 +1,127 @@
+---
+import Header from '../data/components/Header.astro';
+import Footer from '../data/components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'RyomaAbe - フロントエンドエンジニア' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja" class="no-flash">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self';" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | RyomaAbe</title>
+    <script is:inline>
+      // Prevent flash of white content in dark mode
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#0a0a0a';
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      })();
+      
+      // Prevent external script errors from affecting the site
+      window.addEventListener('error', function(e) {
+        if (e.filename && e.filename.includes('ads')) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
+    <ViewTransitions />
+    <style>
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 0.3s;
+      }
+      
+      :root.dark {
+        background-color: #0a0a0a;
+      }
+      
+      /* Ensure dark mode persists during transitions */
+      html.dark::view-transition-old(root),
+      html.dark::view-transition-new(root) {
+        background-color: #0a0a0a !important;
+      }
+    </style>
+    <script>
+      document.addEventListener('astro:after-swap', () => {
+        // Re-apply dark mode after page swap
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.backgroundColor = '#0a0a0a';
+          document.documentElement.style.colorScheme = 'dark';
+          
+          // Update dark mode toggle icons
+          const sunIcons = document.querySelectorAll('#sun-icon');
+          const moonIcons = document.querySelectorAll('#moon-icon');
+          sunIcons.forEach(icon => icon?.classList.add('hidden'));
+          moonIcons.forEach(icon => icon?.classList.remove('hidden'));
+        } else {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.style.backgroundColor = '';
+          document.documentElement.style.colorScheme = 'light';
+          
+          const sunIcons = document.querySelectorAll('#sun-icon');
+          const moonIcons = document.querySelectorAll('#moon-icon');
+          sunIcons.forEach(icon => icon?.classList.remove('hidden'));
+          moonIcons.forEach(icon => icon?.classList.add('hidden'));
+        }
+      });
+      
+      // Also handle dark mode toggle clicks globally
+      document.addEventListener('astro:page-load', () => {
+        const darkModeToggles = document.querySelectorAll('#dark-mode-toggle');
+        darkModeToggles.forEach(toggle => {
+          toggle.addEventListener('click', () => {
+            const isDarkMode = document.documentElement.classList.contains('dark');
+            
+            if (isDarkMode) {
+              document.documentElement.classList.remove('dark');
+              document.documentElement.style.backgroundColor = '';
+              document.documentElement.style.colorScheme = 'light';
+              localStorage.setItem('theme', 'light');
+              
+              const sunIcons = document.querySelectorAll('#sun-icon');
+              const moonIcons = document.querySelectorAll('#moon-icon');
+              sunIcons.forEach(icon => icon?.classList.remove('hidden'));
+              moonIcons.forEach(icon => icon?.classList.add('hidden'));
+            } else {
+              document.documentElement.classList.add('dark');
+              document.documentElement.style.backgroundColor = '#0a0a0a';
+              document.documentElement.style.colorScheme = 'dark';
+              localStorage.setItem('theme', 'dark');
+              
+              const sunIcons = document.querySelectorAll('#sun-icon');
+              const moonIcons = document.querySelectorAll('#moon-icon');
+              sunIcons.forEach(icon => icon?.classList.add('hidden'));
+              moonIcons.forEach(icon => icon?.classList.remove('hidden'));
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col bg-white dark:bg-dark-bg text-gray-900 dark:text-gray-100">
+    <Header />
+    <main class="flex-grow pt-[65px] md:pt-[73px]">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

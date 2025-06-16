@@ -1,0 +1,56 @@
+---
+// Page transition component
+---
+
+<div id="page-transition" class="fixed inset-0 z-[100] pointer-events-none">
+  <div class="absolute inset-0 bg-white dark:bg-dark-bg opacity-0 transition-opacity duration-300 ease-out" id="transition-overlay"></div>
+</div>
+
+<script>
+  let isTransitioning = false;
+  
+  function showTransition() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    
+    const overlay = document.getElementById('transition-overlay');
+    if (overlay) {
+      overlay.style.opacity = '1';
+    }
+  }
+  
+  function hideTransition() {
+    const overlay = document.getElementById('transition-overlay');
+    if (overlay) {
+      setTimeout(() => {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+          isTransitioning = false;
+        }, 300);
+      }, 100);
+    }
+  }
+  
+  // Show transition on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    hideTransition();
+  });
+  
+  // Handle link clicks
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link && link.href && link.href.startsWith(window.location.origin)) {
+      const isExternal = link.target === '_blank';
+      const isSamePage = link.href === window.location.href;
+      
+      if (!isExternal && !isSamePage) {
+        e.preventDefault();
+        showTransition();
+        
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 200);
+      }
+    }
+  });
+</script>
