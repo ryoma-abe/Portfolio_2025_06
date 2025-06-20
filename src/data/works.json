@@ -1,11 +1,19 @@
 [
   {
     "id": 1,
-    "title": "mochimoji",
-    "description": "和菓子・お菓子を扱うECサイトを構築。商品の魅力を伝える美しいデザインと使いやすいUI/UXを実現。",
-    "image": "/images/work1.jpg",
-    "link": "https://mochimoji.jp/",
-    "technologies": ["Shopify"]
+    "title": "StreamFlix",
+    "description": "映画ストリーミング Web アプリを構築。TMDB API 連携による映画データ取得、Google OAuth 認証、お気に入り管理などを実装し、Next.js + Prisma で高速かつ型安全な UX を実現。",
+    "image": "/images/work-streamflix.jpg",
+    "link": "https://streamflix-chi.vercel.app/",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth.js"
+    ]
   },
   {
     "id": 2,
@@ -62,5 +70,13 @@
     "image": "/images/work8.jpg",
     "link": "https://andpilates-fit.com/",
     "technologies": ["WordPress"]
+  },
+  {
+    "id": 9,
+    "title": "mochimoji",
+    "description": "和菓子・お菓子を扱うECサイトを構築。商品の魅力を伝える美しいデザインと使いやすいUI/UXを実現。",
+    "image": "/images/work1.jpg",
+    "link": "https://mochimoji.jp/",
+    "technologies": ["Shopify"]
   }
 ]
