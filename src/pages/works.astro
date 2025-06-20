@@ -20,11 +20,19 @@ import worksData from '../data/works.json';
         {worksData.map((work, index) => (
           <article class="group">
             <div class="aspect-[4/3] border border-gray-200 dark:border-gray-600 relative overflow-hidden mb-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700">
-              <div class="absolute inset-0 flex items-center justify-center">
-                <span class="text-7xl font-mono font-light text-gray-200 dark:text-gray-600 group-hover:text-accent transition-all duration-500 group-hover:scale-110">
-                  [{String(index + 1).padStart(2, '0')}]
-                </span>
-              </div>
+              {work.image ? (
+                <img 
+                  src={work.image} 
+                  alt={work.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-7xl font-mono font-light text-gray-200 dark:text-gray-600 group-hover:text-accent transition-all duration-500 group-hover:scale-110">
+                    [{String(index + 1).padStart(2, '0')}]
+                  </span>
+                </div>
+              )}
               <!-- Corner decoration -->
               <div class="absolute top-4 left-4 w-8 h-8 border-l border-t border-gray-300 dark:border-gray-500"></div>
               <div class="absolute bottom-4 right-4 w-8 h-8 border-r border-b border-gray-300 dark:border-gray-500"></div>
