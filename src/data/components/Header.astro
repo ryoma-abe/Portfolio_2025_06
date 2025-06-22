@@ -19,14 +19,14 @@ const currentPath = Astro.url.pathname;
     <div class="flex">
       <!-- Left Navigation -->
       <div class="hidden md:flex border-r border-gray-200 dark:border-gray-700">
-        {navItems.map((item, index) => (
+        {navItems.map((item) => (
           <a 
             href={item.href} 
             class={`px-8 py-6 text-xs font-medium tracking-wider border-r border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-300 font-mono flex items-center ${
               currentPath === item.href ? 'text-primary dark:text-dark-primary bg-gray-50 dark:bg-gray-800' : 'text-secondary dark:text-dark-secondary'
             }`}
           >
-            <span class="text-code mr-2">&gt;</span>{item.label}
+            <span class="text-code dark:text-dark-code mr-2">&gt;</span>{item.label}
           </a>
         ))}
       </div>
@@ -34,7 +34,7 @@ const currentPath = Astro.url.pathname;
       <!-- Center Logo -->
       <div class="flex-1 flex items-center justify-center py-4 md:py-6">
         <a href="/" class="text-xl md:text-2xl font-normal tracking-wider text-primary dark:text-dark-primary flex items-center gap-2">
-          <span class="text-accent font-mono">&lt;/&gt;</span>
+          <span class="text-accent dark:text-dark-accent font-mono">&lt;/&gt;</span>
           <span>{company.name}</span>
         </a>
       </div>

@@ -10,7 +10,7 @@ import worksData from '../data/works.json';
     
     <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
       <div class="flex items-center gap-8 mb-16">
-        <h1 class="text-xs font-semibold tracking-[0.3em] text-code font-mono">
+        <h1 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code font-mono">
           // PROJECTS
         </h1>
         <div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
@@ -28,7 +28,7 @@ import worksData from '../data/works.json';
                 />
               ) : (
                 <div class="absolute inset-0 flex items-center justify-center">
-                  <span class="text-7xl font-mono font-light text-gray-200 dark:text-gray-600 group-hover:text-accent transition-all duration-500 group-hover:scale-110">
+                  <span class="text-7xl font-mono font-light text-gray-200 dark:text-gray-600 group-hover:text-accent dark:group-hover:text-dark-accent transition-all duration-500 group-hover:scale-110">
                     [{String(index + 1).padStart(2, '0')}]
                   </span>
                 </div>
@@ -50,7 +50,7 @@ import worksData from '../data/works.json';
               
               <div class="flex flex-wrap gap-2 mb-6">
                 {work.technologies.map((tech) => (
-                  <span class="text-xs font-mono text-accent border border-gray-200 dark:border-gray-600 px-3 py-1 hover:border-accent transition-colors duration-300">
+                  <span class="text-xs font-mono text-accent dark:text-dark-accent border border-gray-200 dark:border-gray-600 px-3 py-1 hover:border-accent dark:hover:border-dark-accent transition-colors duration-300">
                     {tech}
                   </span>
                 ))}

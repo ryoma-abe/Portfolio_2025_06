@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import siteInfo from '../data/siteInfo.json';
 
-const { contact, company } = siteInfo;
+const { contact } = siteInfo;
 
 const services = [
   {
@@ -31,9 +31,9 @@ const services = [
     
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-24 w-full">
       <div class="max-w-4xl">
-        <p class="text-xs font-semibold tracking-[0.3em] text-code mb-6 md:mb-8 font-mono">// PORTFOLIO</p>
+        <p class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-6 md:mb-8 font-mono">// PORTFOLIO</p>
         <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light tracking-tight text-primary dark:text-dark-primary mb-4 md:mb-6 lg:mb-8 leading-tight md:leading-[0.9]">
-          Ryoma<span class="text-accent">Abe</span>
+          Ryoma<span class="text-accent dark:text-dark-accent">Abe</span>
         </h1>
         <p class="text-base sm:text-lg md:text-xl font-normal text-secondary dark:text-dark-secondary mb-12 md:mb-16 tracking-wide">
           フロントエンドエンジニア
@@ -62,7 +62,7 @@ const services = [
       
       <!-- Bottom right text -->
       <div class="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-12 md:right-12 text-right">
-        <p class="text-xs font-mono text-code hidden sm:block">/* Frontend Developer */</p>
+        <p class="text-xs font-mono text-code dark:text-dark-code hidden sm:block">/* Frontend Developer */</p>
         <p class="text-xs font-medium text-secondary dark:text-dark-secondary tracking-wider">{contact.location}</p>
       </div>
     </div>
@@ -74,7 +74,7 @@ const services = [
     <div class="absolute right-0 top-32 w-24 h-px bg-gray-200 dark:bg-gray-700"></div>
     
     <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
-      <h2 class="text-xs font-semibold tracking-[0.3em] text-code mb-16 font-mono">
+      <h2 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-16 font-mono">
         // SERVICES
       </h2>
       <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
@@ -83,7 +83,7 @@ const services = [
             {index < 2 && (
               <div class="absolute right-0 top-0 bottom-0 w-px bg-gray-100 dark:bg-gray-700 hidden md:block"></div>
             )}
-            <span class="text-5xl font-mono font-light text-gray-300 dark:text-gray-600 group-hover:text-accent transition-colors duration-500">
+            <span class="text-5xl font-mono font-light text-gray-300 dark:text-gray-600 group-hover:text-accent dark:group-hover:text-dark-accent transition-colors duration-500">
               [{service.number}]
             </span>
             <h3 class="text-xl font-medium text-primary dark:text-dark-primary mt-8 mb-4">

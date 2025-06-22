@@ -43,7 +43,7 @@ const philosophy = [
     
     <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
       <div class="flex items-center gap-8 mb-16">
-        <h1 class="text-xs font-semibold tracking-[0.3em] text-code font-mono">
+        <h1 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code font-mono">
           // PROFILE
         </h1>
         <div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
@@ -66,13 +66,13 @@ const philosophy = [
         </div>
         
         <div>
-          <h3 class="text-xs font-semibold tracking-[0.3em] text-code mb-8 font-mono">
+          <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-8 font-mono">
             // TECH_STACK
           </h3>
           <div class="space-y-3">
             {skills.map((skill) => (
               <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-accent w-20">{skill.category}:</span>
+                <span class="text-xs font-mono text-accent dark:text-dark-accent w-20">{skill.category}:</span>
                 <span class="text-sm font-medium text-primary dark:text-dark-primary">{skill.name}</span>
               </div>
             ))}
@@ -81,7 +81,7 @@ const philosophy = [
       </div>
       
       <div class="mt-24 md:mt-32">
-        <h3 class="text-xs font-semibold tracking-[0.3em] text-code mb-12 md:mb-16 font-mono">
+        <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono">
           // EXPERIENCE
         </h3>
         <div class="relative">
@@ -89,12 +89,12 @@ const philosophy = [
           <div class="space-y-12 md:space-y-16">
             {experience.map((item, index) => (
               <div class="relative pl-12 md:pl-16">
-                <div class="absolute left-0 w-8 h-8 bg-accent rounded-full flex items-center justify-center">
+                <div class="absolute left-0 w-8 h-8 bg-accent dark:bg-dark-accent rounded-full flex items-center justify-center">
                   <span class="text-xs font-mono text-white">{String(index + 1).padStart(2, '0')}</span>
                 </div>
                 <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 md:p-8">
                   <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                    <span class="text-xs font-mono text-accent font-semibold">{item.period}</span>
+                    <span class="text-xs font-mono text-accent dark:text-dark-accent font-semibold">{item.period}</span>
                     <span class="text-sm font-medium text-primary dark:text-dark-primary mt-1 sm:mt-0">{item.company}</span>
                   </div>
                   <h4 class="text-lg font-semibold text-primary dark:text-dark-primary mb-3">
@@ -111,13 +111,13 @@ const philosophy = [
       </div>
       
       <div class="mt-24 md:mt-32">
-        <h3 class="text-xs font-semibold tracking-[0.3em] text-code mb-12 md:mb-16 font-mono">
+        <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono">
           // PHILOSOPHY
         </h3>
         <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
           {philosophy.map((item, index) => (
             <div class="border-t border-gray-100 dark:border-gray-700 pt-8">
-              <span class="text-xs font-mono text-accent">[{String(index + 1).padStart(2, '0')}]</span>
+              <span class="text-xs font-mono text-accent dark:text-dark-accent">[{String(index + 1).padStart(2, '0')}]</span>
               <h4 class="text-lg font-medium text-primary dark:text-dark-primary mt-4 mb-4">
                 {item.title}
               </h4>

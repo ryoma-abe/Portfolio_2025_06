@@ -17,65 +17,25 @@
   },
   {
     "id": 2,
-    "title": "XBオンラインストア",
-    "description": "スポーツ用品を扱うECサイトを構築。アクティブなブランドイメージを表現したデザインで販売促進。",
-    "image": "/images/work2.jpg",
-    "link": "https://xb-sports.com/",
-    "technologies": ["Shopify"]
-  },
-  {
-    "id": 3,
-    "title": "APOTHECA",
-    "description": "美容・健康商品を扱うECサイトを構築。洗練されたデザインでブランド価値を向上。",
-    "image": "/images/work3.jpg",
-    "link": "https://apothecajp.com/",
-    "technologies": ["Shopify"]
-  },
-  {
-    "id": 4,
-    "title": "SNORE512",
-    "description": "フレンチブルドッグのコテツくんをモチーフにしたアパレルブランド「SNORE512」のECサイトを構築。オーガニックコットンを使用したアパレル製品やグッズを展開するブランドサイトとして実装。Printfulとの連携機能を使用し、商品の在庫管理と配送を実装。",
-    "image": "/images/work4.jpg",
-    "link": "https://snore512.dog/",
-    "technologies": ["Shopify"]
-  },
-  {
-    "id": 5,
-    "title": ".CELLESSENCE様",
-    "description": "Shopifyの『Dawn』テーマをベースに、ブランドアイデンティティを反映したカスタマイズを実施。Liquidを活用した複数のオリジナルセクションを開発し、クライアント様自身での柔軟なコンテンツ更新を実現したECサイトを構築。",
-    "image": "/images/work5.jpg",
-    "link": "https://confit-essence.myshopify.com/",
-    "technologies": ["Shopify"]
-  },
-  {
-    "id": 6,
-    "title": "オンラインサロンHal様",
-    "description": "オンラインサロンHal様のオンラインサロンを構築。サブスクリプション機能とロック機能を使用し実装。会員ランクはShopifyFlowでのタグ付けで会員ランクによってアクセスできるコンテンツを出し分け。退会後の挙動もShopifyFlowで実装。ブログ機能で動画コンテンツの配信を実現。",
-    "image": "/images/work6.jpg",
-    "link": "https://salonhal.jp/",
-    "technologies": ["Shopify"]
-  },
-  {
-    "id": 7,
-    "title": "Rejuve.EC 様",
-    "description": "会員制のエクステ販売サイトを制作。会員ランクシステムとInstagram連携を導入。高級感を出しつつ、シンプルで使いやすいデザインで構築。無料テーマを使用し、限られた予算で実装。",
-    "image": "/images/work7.jpg",
-    "link": "https://rejuveec.com/",
+    "title": "FUKU COFFEE ROASTERY",
+    "description": "コーヒーロースタリーのウェブサイトを構築。ブランドイメージを反映したミニマルなデザインで、商品紹介やオンライン注文機能を実装。",
+    "image": "/images/work-fuku-coffee.png",
+    "link": "https://fuku-coffee-roastery.com/",
     "technologies": ["Shopify"]
   },
   {
     "id": 8,
-    "title": "&ピラティス様",
-    "description": "&ピラティス様のコーディングと一部デザインを担当。デザインカンプからのコーディング / WPのオリジナルテーマ化を実装。Sassを用いてコーディングし、カスタムフィールド（ACF）・カスタム投稿・MW WP Form等を使用。",
-    "image": "/images/work8.jpg",
-    "link": "https://andpilates-fit.com/",
-    "technologies": ["WordPress"]
+    "title": "Rejuve.EC 様",
+    "description": "会員制のエクステ販売サイトを制作。会員ランクシステムとInstagram連携を導入。高級感を出しつつ、シンプルで使いやすいデザインで構築。無料テーマを使用し、限られた予算で実装。",
+    "image": "/images/work-rejuve-ec.png",
+    "link": "https://rejuveec.com/",
+    "technologies": ["Shopify"]
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "mochimoji",
     "description": "和菓子・お菓子を扱うECサイトを構築。商品の魅力を伝える美しいデザインと使いやすいUI/UXを実現。",
-    "image": "/images/work1.jpg",
+    "image": "/images/work-mochimoji.png",
     "link": "https://mochimoji.jp/",
     "technologies": ["Shopify"]
   }

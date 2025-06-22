@@ -12,7 +12,7 @@ const { contact, social } = siteInfo;
     
     <div class="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 lg:px-24">
       <div class="flex items-center gap-4 md:gap-8 mb-12 md:mb-16">
-        <h1 class="text-xs font-semibold tracking-[0.3em] text-code font-mono">
+        <h1 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code font-mono">
           // GET_IN_TOUCH
         </h1>
         <div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
@@ -31,18 +31,18 @@ const { contact, social } = siteInfo;
           
           <div class="space-y-6">
             <div>
-              <h3 class="text-xs font-semibold tracking-wider text-code mb-2 font-mono">// EMAIL</h3>
-              <a href={`mailto:${contact.email}`} class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent dark:hover:text-accent transition-colors duration-300">{contact.email}</a>
+              <h3 class="text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-2 font-mono">// EMAIL</h3>
+              <a href={`mailto:${contact.email}`} class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent dark:hover:text-dark-accent transition-colors duration-300">{contact.email}</a>
             </div>
             <div>
-              <h3 class="text-xs font-semibold tracking-wider text-code mb-2 font-mono">// SOCIAL</h3>
+              <h3 class="text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-2 font-mono">// SOCIAL</h3>
               <div class="flex flex-wrap gap-4 md:gap-6">
                 {social.map((link) => (
                   <a 
                     href={link.url} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent transition-colors duration-300"
+                    class="text-sm font-medium text-primary dark:text-dark-primary hover:text-accent dark:hover:text-dark-accent transition-colors duration-300"
                   >
                     {link.name}
                   </a>
@@ -61,7 +61,7 @@ const { contact, social } = siteInfo;
             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
             
             <div>
-              <label for="name" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+              <label for="name" class="block text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-3 font-mono">
                 NAME *
               </label>
               <input
@@ -75,7 +75,7 @@ const { contact, social } = siteInfo;
             </div>
             
             <div>
-              <label for="email" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+              <label for="email" class="block text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-3 font-mono">
                 EMAIL *
               </label>
               <input
@@ -89,7 +89,7 @@ const { contact, social } = siteInfo;
             </div>
             
             <div>
-              <label for="subject" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+              <label for="subject" class="block text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-3 font-mono">
                 SUBJECT *
               </label>
               <input
@@ -103,7 +103,7 @@ const { contact, social } = siteInfo;
             </div>
             
             <div>
-              <label for="message" class="block text-xs font-semibold tracking-wider text-code mb-3 font-mono">
+              <label for="message" class="block text-xs font-semibold tracking-wider text-code dark:text-dark-code mb-3 font-mono">
                 MESSAGE *
               </label>
               <textarea
