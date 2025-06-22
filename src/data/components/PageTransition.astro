@@ -38,7 +38,7 @@
   
   // Handle link clicks
   document.addEventListener('click', (e) => {
-    const link = e.target.closest('a');
+    const link = e.target && (e.target as HTMLElement).closest('a');
     if (link && link.href && link.href.startsWith(window.location.origin)) {
       const isExternal = link.target === '_blank';
       const isSamePage = link.href === window.location.href;

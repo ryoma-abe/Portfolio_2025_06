@@ -10,7 +10,7 @@
   }
   
   body {
-    @apply text-gray-900 antialiased;
+    @apply text-gray-900 dark:text-gray-100 antialiased;
   }
   
   /* Prevent white flash */
@@ -21,14 +21,14 @@
 
 @layer components {
   .border-line {
-    @apply border-gray-200;
+    @apply border-gray-200 dark:border-gray-700;
   }
   
   .vertical-line {
-    @apply w-px bg-gray-200 h-full;
+    @apply w-px bg-gray-200 dark:bg-gray-700 h-full;
   }
   
   .horizontal-line {
-    @apply h-px bg-gray-200 w-full;
+    @apply h-px bg-gray-200 dark:bg-gray-700 w-full;
   }
 }

@@ -5,25 +5,26 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': '475px',
-      },
-      colors: {
-        primary: '#000000',
-        secondary: '#4B5563',
-        accent: '#0066FF',
-        code: '#10B981',
-        'dark-primary': '#FFFFFF',
-        'dark-secondary': '#9CA3AF',
-        'dark-bg': '#111827',
-        'dark-surface': '#1F2937',
+        xs: '475px',
       },
       fontFamily: {
-        sans: ['Inter', 'Noto Sans JP', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
+        sans: ['Inter', 'Noto Sans JP', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        primary: '#3730a3',
+        secondary: '#7c3aed',
+        accent: '#10b981',
+        code: '#64748b',
+        'dark-bg': '#0a0a0a',
+        'dark-primary': '#818cf8',
+        'dark-secondary': '#a78bfa',
+        'dark-accent': '#34d399',
+        'dark-code': '#94a3b8',
       },
       fontSize: {
-        '8xl': '5.5rem',
-        '9xl': '7rem',
+        '8xl': '6rem',
+        '9xl': '8rem',
       },
     },
   },
