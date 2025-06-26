@@ -4,11 +4,12 @@ import siteInfo from '../siteInfo.json';
 
 const { social, company } = siteInfo;
 
+const baseUrl = import.meta.env.BASE_URL;
 const navItems = [
-  { href: '/', label: 'TOP' },
-  { href: '/works', label: 'WORK' },
-  { href: '/about', label: 'PROFILE' },
-  { href: '/contact', label: 'CONTACT' },
+  { href: baseUrl, label: 'TOP' },
+  { href: `${baseUrl}works`, label: 'WORK' },
+  { href: `${baseUrl}about`, label: 'PROFILE' },
+  { href: `${baseUrl}contact`, label: 'CONTACT' },
 ];
 
 const currentPath = Astro.url.pathname;
@@ -33,7 +34,7 @@ const currentPath = Astro.url.pathname;
       
       <!-- Center Logo -->
       <div class="flex-1 flex items-center justify-center py-4 md:py-6">
-        <a href="/" class="text-xl md:text-2xl font-normal tracking-wider text-primary dark:text-dark-primary flex items-center gap-2">
+        <a href={baseUrl} class="text-xl md:text-2xl font-normal tracking-wider text-primary dark:text-dark-primary flex items-center gap-2">
           <span class="text-accent dark:text-dark-accent font-mono">&lt;/&gt;</span>
           <span>{company.name}</span>
         </a>
