@@ -1,11 +1,11 @@
 # WebChaleur ポートフォリオサイト
 
-このリポジトリは、WebChaleurのポートフォリオサイトのソースコードです。
+このリポジトリは、WebChaleur のポートフォリオサイトのソースコードです。
 
 ## 🚀 サイトの概要
 
 - **サイト名**: WebChaleur（ウェブシャル）
-- **コンセプト**: 「Webで温かいつながりを作る」
+- **コンセプト**: 「Web で温かいつながりを作る」
 - **フレームワーク**: Astro + Tailwind CSS
 - **デプロイ先**: Cloudflare Pages
 
@@ -13,7 +13,7 @@
 
 ### パフォーマンス
 
-- **Lighthouse スコア**: 
+- **Lighthouse スコア**:
   - Performance: 95+
   - Accessibility: 100
   - Best Practices: 100
@@ -27,12 +27,13 @@
 ### 使用技術
 
 #### フロントエンド
+
 - **フレームワーク**: [Astro](https://astro.build/) v4.16
   - 静的サイト生成（SSG）
   - アイランドアーキテクチャ採用
-  - View Transitions API対応
+  - View Transitions API 対応
 - **スタイリング**: [Tailwind CSS](https://tailwindcss.com/) v3.4
-  - ユーティリティファーストCSS
+  - ユーティリティファースト CSS
   - カスタムカラーパレット
   - ダークモード対応
 - **フォント**: Google Fonts
@@ -41,28 +42,29 @@
   - JetBrains Mono（コード）
 
 #### 開発環境
+
 - **パッケージマネージャー**: npm
-- **コード品質**: 
+- **コード品質**:
   - ESLint（コード規約）
   - Prettier（コードフォーマット）
-- **型安全性**: TypeScript対応可能
+- **型安全性**: TypeScript 対応可能
 
 ### 機能
 
 - ✅ **レスポンシブデザイン**: モバイル・タブレット・デスクトップ対応
 - ✅ **ダークモード**: システム設定連動 + 手動切り替え
-- ✅ **スムーズなページ遷移**: View Transitions APIによるアニメーション
-- ✅ **SEO最適化**: メタタグ・構造化データ対応
-- ✅ **アクセシビリティ**: WCAG 2.1 AA準拠
+- ✅ **スムーズなページ遷移**: View Transitions API によるアニメーション
+- ✅ **SEO 最適化**: メタタグ・構造化データ対応
+- ✅ **アクセシビリティ**: WCAG 2.1 AA 準拠
 - ✅ **高速表示**: 静的生成 + 最適化された画像配信
-- ✅ **お問い合わせフォーム**: Web3Forms連携（JavaScriptフリー）
+- ✅ **お問い合わせフォーム**: Web3Forms 連携（JavaScript フリー）
 
 ### ホスティング
 
 - **プラットフォーム**: Cloudflare Pages
-- **CDN**: Cloudflareグローバルネットワーク
-- **SSL**: 自動HTTPS化
-- **デプロイ**: GitHub連携による自動デプロイ
+- **CDN**: Cloudflare グローバルネットワーク
+- **SSL**: 自動 HTTPS 化
+- **デプロイ**: GitHub 連携による自動デプロイ
 
 ## 📁 プロジェクト構成
 
@@ -136,18 +138,18 @@ npm run preview
 
 - `id` は重複しない数値を設定
 - `image` のパスは `/images/` から始める
-- `link` には実際のサイトURLを設定（公開前は `#` でOK）
+- `link` には実際のサイト URL を設定（公開前は `#` で OK）
 - `technologies` は配列形式で記述
 
 ### プロフィール情報の更新
 
 `src/pages/about.astro` ファイルを直接編集します。
 
-### 連絡先情報・SNSリンクの更新
+### 連絡先情報・SNS リンクの更新
 
-連絡先情報とSNSリンクは `src/data/siteInfo.json` ファイルで一元管理されています。
+連絡先情報と SNS リンクは `src/data/siteInfo.json` ファイルで一元管理されています。
 
-#### siteInfo.jsonの構造
+#### siteInfo.json の構造
 
 ```json
 {
@@ -162,7 +164,7 @@ npm run preview
       "icon": "x"
     },
     {
-      "name": "GitHub", 
+      "name": "GitHub",
       "url": "https://github.com",
       "icon": "github"
     },
@@ -186,7 +188,7 @@ npm run preview
 2. 該当項目を編集：
    - **メールアドレス**: `contact.email`
    - **所在地**: `contact.location`
-   - **SNSリンク**: `social` 配列内のオブジェクト
+   - **SNS リンク**: `social` 配列内のオブジェクト
    - **会社名**: `company.name`
    - **キャッチコピー**: `company.tagline`
 3. 保存すると全ページに自動反映
@@ -195,7 +197,7 @@ npm run preview
 
 ### カラーテーマ
 
-Tailwind CSSの設定ファイル `tailwind.config.mjs` でカラーを定義しています：
+Tailwind CSS の設定ファイル `tailwind.config.mjs` でカラーを定義しています：
 
 ```js
 colors: {
@@ -210,32 +212,33 @@ colors: {
 
 ### フォント
 
-Google Fontsを使用：
+Google Fonts を使用：
+
 - **日本語**: Noto Sans JP
 - **英語**: Inter
 - **コード**: JetBrains Mono
 
 ## 📧 お問い合わせフォームの設定
 
-お問い合わせフォームはWeb3Formsを使用しています。
+お問い合わせフォームは Web3Forms を使用しています。
 
 ### セットアップ手順
 
 1. [Web3Forms](https://web3forms.com/)でアクセスキーを取得
-2. `src/pages/contact.astro` の51行目を編集：
+2. `src/pages/contact.astro` の 51 行目を編集：
 
 ```html
-<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
 ```
 
 3. `YOUR_ACCESS_KEY_HERE` を取得したキーに置き換え
 
 ## 🚀 デプロイ
 
-### Cloudflare Pagesへのデプロイ
+### Cloudflare Pages へのデプロイ
 
-1. GitHubにリポジトリをプッシュ
-2. Cloudflare Pagesでプロジェクトを作成
+1. GitHub にリポジトリをプッシュ
+2. Cloudflare Pages でプロジェクトを作成
 3. ビルド設定：
    - ビルドコマンド: `npm run build`
    - ビルド出力ディレクトリ: `dist`
@@ -253,11 +256,12 @@ A: 画像パスが正しいか確認し、`public/images/` フォルダに画像
 
 ### Q: フォームが動作しない
 
-A: Web3Formsのアクセスキーが正しく設定されているか確認してください。
+A: Web3Forms のアクセスキーが正しく設定されているか確認してください。
 
 ## 📞 サポート
 
 問題が発生した場合は、以下までお問い合わせください：
+
 - Email: webchaleur@gmail.com
 
 ---
