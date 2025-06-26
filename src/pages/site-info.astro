@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
 <Layout title="このサイトについて">
@@ -33,7 +34,7 @@ import Layout from '../layouts/Layout.astro';
                 <!-- Lighthouse Score Image -->
                 <div class="mb-4">
                   <img 
-                    src="/images/lighthouse-score.png" 
+                    src={`${baseUrl}images/lighthouse-score.png`} 
                     alt="Lighthouse Performance Score"
                     class="w-full rounded border border-gray-200 dark:border-gray-700"
                   />
