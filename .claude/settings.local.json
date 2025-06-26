@@ -18,7 +18,8 @@
       "Bash(sudo rm:*)",
       "Bash(true)",
       "Bash(npx rimraf:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
