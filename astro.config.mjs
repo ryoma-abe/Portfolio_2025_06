@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://ryoma-abe.github.io',
-  base: '/portfolio-2506',
+  base: '/portfolio-2506/',
   integrations: [tailwind()],
 });
