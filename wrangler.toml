@@ -1,0 +1,8 @@
+name = "portfolio-2025-06"
+compatibility_date = "2025-06-26"
+
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm install && npm run build"
