@@ -19,7 +19,8 @@
       "Bash(true)",
       "Bash(npx rimraf:*)",
       "Bash(git add:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }
