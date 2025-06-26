@@ -17,7 +17,8 @@
       "Bash(npm cache clean:*)",
       "Bash(sudo rm:*)",
       "Bash(true)",
-      "Bash(npx rimraf:*)"
+      "Bash(npx rimraf:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
