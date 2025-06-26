@@ -22,3 +22,13 @@ pnpm-debug.log*
 # editor
 .vscode/
 .idea/
+
+# screenshots and temporary files
+CleanShot*
+*.tmp
+*.temp
+*.bak
+node_modules_backup/
+
+# log files
+*.log

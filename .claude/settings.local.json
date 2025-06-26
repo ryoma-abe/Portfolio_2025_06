@@ -14,7 +14,10 @@
       "Bash(curl:*)",
       "Bash(kill:*)",
       "Bash(ls:*)",
-      "Bash(npm cache clean:*)"
+      "Bash(npm cache clean:*)",
+      "Bash(sudo rm:*)",
+      "Bash(true)",
+      "Bash(npx rimraf:*)"
     ],
     "deny": []
   }
