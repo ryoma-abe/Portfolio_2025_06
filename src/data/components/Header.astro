@@ -7,9 +7,9 @@ const { social, company } = siteInfo;
 const baseUrl = import.meta.env.BASE_URL;
 const navItems = [
   { href: baseUrl, label: 'TOP' },
-  { href: `${baseUrl}works`, label: 'WORK' },
-  { href: `${baseUrl}about`, label: 'PROFILE' },
-  { href: `${baseUrl}contact`, label: 'CONTACT' },
+  { href: `${baseUrl}works/`, label: 'WORK' },
+  { href: `${baseUrl}about/`, label: 'PROFILE' },
+  { href: `${baseUrl}contact/`, label: 'CONTACT' },
 ];
 
 const currentPath = Astro.url.pathname;
