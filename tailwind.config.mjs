@@ -14,7 +14,7 @@ export default {
       colors: {
         primary: '#3730a3',
         secondary: '#7c3aed',
-        accent: '#10b981',
+        accent: '#059669',
         code: '#64748b',
         'dark-bg': '#0a0a0a',
         'dark-primary': '#818cf8',
