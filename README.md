@@ -1,269 +1,48 @@
-# ポートフォリオサイト
+# RyomaAbe Portfolio
 
-このリポジトリは、WebChaleur のポートフォリオサイトのソースコードです。
+フロントエンドエンジニア RyomaAbeのポートフォリオサイトです。
 
-## 🚀 サイトの概要
+## 🌐 サイト情報
 
-- **サイト名**: WebChaleur（ウェブシャル）
-- **コンセプト**: 「Web で温かいつながりを作る」
-- **フレームワーク**: Astro + Tailwind CSS
-- **デプロイ先**: Cloudflare Pages
+**URL**: https://ryoma-abe.github.io/portfolio-2506/
 
-## 💡 このサイトの特徴
+モダンで洗練されたデザインと高速なパフォーマンスを実現したポートフォリオサイトです。
+私の制作実績やスキル、経歴をご覧いただけます。
+
+## ✨ 特徴
+
+### デザイン
+- **ミニマルデザイン**: 情報を明確に伝えるシンプルで美しいデザイン
+- **ダークモード対応**: システム設定に連動し、目に優しい表示を実現
+- **レスポンシブ対応**: スマートフォン、タブレット、デスクトップ全てで最適な表示
 
 ### パフォーマンス
+- **高速表示**: 静的サイト生成により瞬時にページを表示
+- **最適化された画像**: WebP形式による軽量で美しい画像配信
+- **スムーズな遷移**: ページ間の移動も滑らかで快適
 
-- **Lighthouse スコア**:
-  - Performance: 95+
-  - Accessibility: 100
-  - Best Practices: 100
-  - SEO: 100
-- **スコア画像**: `/public/images/lighthouse-score.png` に配置してください
-- **First Contentful Paint**: < 1.0s
-- **Largest Contentful Paint**: < 2.0s
-- **Total Blocking Time**: < 50ms
-- **Cumulative Layout Shift**: < 0.1
+### 技術スタック
+- **Astro v4.9.2** - 最新の静的サイトジェネレーター
+- **Tailwind CSS v3.4.1** - モダンなユーティリティファーストCSS
+- **TypeScript v5.4.5** - 型安全な開発環境
+- **GitHub Pages** - 安定した無料ホスティング
 
-### 使用技術
+## 📱 主な機能
 
-#### フロントエンド
+- **制作実績の紹介**: これまで手がけたプロジェクトを詳しく紹介
+- **スキルセット**: 使用可能な技術スタックを一覧表示
+- **経歴紹介**: 自衛官からエンジニアへの転身ストーリー
+- **お問い合わせ**: シンプルで使いやすいコンタクトフォーム
 
-- **フレームワーク**: [Astro](https://astro.build/) v4.16
-  - 静的サイト生成（SSG）
-  - アイランドアーキテクチャ採用
-  - View Transitions API 対応
-- **スタイリング**: [Tailwind CSS](https://tailwindcss.com/) v3.4
-  - ユーティリティファースト CSS
-  - カスタムカラーパレット
-  - ダークモード対応
-- **フォント**: Google Fonts
-  - Inter（英語）
-  - Noto Sans JP（日本語）
-  - JetBrains Mono（コード）
+## 🎯 このサイトの目的
 
-#### 開発環境
+お客様に私の技術力と制作スタイルを理解していただき、
+新しいプロジェクトでのパートナーシップを築くきっかけとなることを目指しています。
 
-- **パッケージマネージャー**: npm
-- **コード品質**:
-  - ESLint（コード規約）
-  - Prettier（コードフォーマット）
-- **型安全性**: TypeScript 対応可能
+## 📞 お問い合わせ
 
-### 機能
-
-- ✅ **レスポンシブデザイン**: モバイル・タブレット・デスクトップ対応
-- ✅ **ダークモード**: システム設定連動 + 手動切り替え
-- ✅ **スムーズなページ遷移**: View Transitions API によるアニメーション
-- ✅ **SEO 最適化**: メタタグ・構造化データ対応
-- ✅ **アクセシビリティ**: WCAG 2.1 AA 準拠
-- ✅ **高速表示**: 静的生成 + 最適化された画像配信
-- ✅ **お問い合わせフォーム**: Web3Forms 連携（JavaScript フリー）
-
-### ホスティング
-
-- **プラットフォーム**: Cloudflare Pages
-- **CDN**: Cloudflare グローバルネットワーク
-- **SSL**: 自動 HTTPS 化
-- **デプロイ**: GitHub 連携による自動デプロイ
-
-## 📁 プロジェクト構成
-
-```
-WebChaleur/
-├── public/
-│   └── images/        # 制作実績の画像など
-├── src/
-│   ├── components/    # Astroコンポーネント
-│   ├── data/         # JSONデータ
-│   ├── layouts/      # レイアウトコンポーネント
-│   ├── pages/        # ページファイル
-│   └── styles/       # グローバルスタイル
-└── package.json
-```
-
-## 🛠️ セットアップ方法
-
-### 1. 依存関係のインストール
-
-```bash
-npm install
-```
-
-### 2. 開発サーバーの起動
-
-```bash
-npm run dev
-```
-
-ブラウザで `http://localhost:4321` を開いてサイトを確認できます。
-
-### 3. ビルド
-
-```bash
-npm run build
-```
-
-### 4. ビルド後のプレビュー
-
-```bash
-npm run preview
-```
-
-## 📝 コンテンツの更新方法
-
-### 制作実績の更新
-
-制作実績は `src/data/works.json` ファイルで管理されています。
-
-#### 実績を追加する場合
-
-1. `src/data/works.json` を開く
-2. 配列に新しいオブジェクトを追加
-
-```json
-{
-  "id": 4,
-  "title": "プロジェクト名",
-  "description": "プロジェクトの説明文",
-  "image": "/images/work4.jpg",
-  "link": "https://example.com",
-  "technologies": ["使用技術1", "使用技術2"]
-}
-```
-
-3. 画像を `public/images/` フォルダに配置
-4. 保存して開発サーバーで確認
-
-#### 注意点
-
-- `id` は重複しない数値を設定
-- `image` のパスは `/images/` から始める
-- `link` には実際のサイト URL を設定（公開前は `#` で OK）
-- `technologies` は配列形式で記述
-
-### プロフィール情報の更新
-
-`src/pages/about.astro` ファイルを直接編集します。
-
-### 連絡先情報・SNS リンクの更新
-
-連絡先情報と SNS リンクは `src/data/siteInfo.json` ファイルで一元管理されています。
-
-#### siteInfo.json の構造
-
-```json
-{
-  "contact": {
-    "email": "webchaleur@gmail.com",
-    "location": "十勝, Japan"
-  },
-  "social": [
-    {
-      "name": "X",
-      "url": "https://twitter.com/ryoo_black",
-      "icon": "x"
-    },
-    {
-      "name": "GitHub",
-      "url": "https://github.com",
-      "icon": "github"
-    },
-    {
-      "name": "Blog",
-      "url": "https://www.ryoma.online",
-      "icon": "link"
-    }
-  ],
-  "company": {
-    "name": "RyomaAbe",
-    "tagline": "Frontend Developer",
-    "copyright": "© 2024 RyomaAbe. All rights reserved."
-  }
-}
-```
-
-#### 更新方法
-
-1. `src/data/siteInfo.json` を開く
-2. 該当項目を編集：
-   - **メールアドレス**: `contact.email`
-   - **所在地**: `contact.location`
-   - **SNS リンク**: `social` 配列内のオブジェクト
-   - **会社名**: `company.name`
-   - **キャッチコピー**: `company.tagline`
-3. 保存すると全ページに自動反映
-
-## 🎨 デザインのカスタマイズ
-
-### カラーテーマ
-
-Tailwind CSS の設定ファイル `tailwind.config.mjs` でカラーを定義しています：
-
-```js
-colors: {
-  primary: '#1a1a1a',        // メインテキスト
-  secondary: '#666666',      // サブテキスト
-  accent: '#0066cc',         // アクセントカラー
-  'dark-bg': '#0a0a0a',      // ダークモード背景
-  'dark-primary': '#ffffff',  // ダークモードメインテキスト
-  'dark-secondary': '#a0a0a0' // ダークモードサブテキスト
-}
-```
-
-### フォント
-
-Google Fonts を使用：
-
-- **日本語**: Noto Sans JP
-- **英語**: Inter
-- **コード**: JetBrains Mono
-
-## 📧 お問い合わせフォームの設定
-
-お問い合わせフォームは Web3Forms を使用しています。
-
-### セットアップ手順
-
-1. [Web3Forms](https://web3forms.com/)でアクセスキーを取得
-2. `src/pages/contact.astro` の 51 行目を編集：
-
-```html
-<input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-```
-
-3. `YOUR_ACCESS_KEY_HERE` を取得したキーに置き換え
-
-## 🚀 デプロイ
-
-### Cloudflare Pages へのデプロイ
-
-1. GitHub にリポジトリをプッシュ
-2. Cloudflare Pages でプロジェクトを作成
-3. ビルド設定：
-   - ビルドコマンド: `npm run build`
-   - ビルド出力ディレクトリ: `dist`
-4. デプロイを実行
-
-## 🔧 よくある質問
-
-### Q: ダークモードが機能しない
-
-A: ブラウザのローカルストレージをクリアして、ページをリロードしてください。
-
-### Q: 画像が表示されない
-
-A: 画像パスが正しいか確認し、`public/images/` フォルダに画像が配置されているか確認してください。
-
-### Q: フォームが動作しない
-
-A: Web3Forms のアクセスキーが正しく設定されているか確認してください。
-
-## 📞 サポート
-
-問題が発生した場合は、以下までお問い合わせください：
-
-- Email: webchaleur@gmail.com
+お仕事のご依頼や相談は、サイト内のコンタクトフォームからお気軽にご連絡ください。
 
 ---
 
-© 2024 WebChaleur. All rights reserved.# Portfolio_2025_06
+© 2024 RyomaAbe. All rights reserved.

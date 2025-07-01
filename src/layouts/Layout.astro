@@ -27,13 +27,24 @@ const baseUrl = import.meta.env.BASE_URL;
     <meta name="generator" content={Astro.generator} />
     <title>{title} | RyomaAbe</title>
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7M3K0CJX1H"></script>
+    <!-- Delayed Google Analytics -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7M3K0CJX1H');
+      // Load Google Analytics after page load
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-7M3K0CJX1H';
+          document.head.appendChild(script);
+          
+          script.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7M3K0CJX1H');
+          };
+        }, 1000);
+      });
     </script>
     
     <!-- Optimize font loading -->
@@ -54,6 +65,14 @@ const baseUrl = import.meta.env.BASE_URL;
           document.documentElement.style.colorScheme = 'dark';
         }
       })();
+      
+      // Preload critical fonts
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+          document.fonts.load('400 1em Inter');
+          document.fonts.load('400 1em Noto Sans JP');
+        });
+      }
       
       // Prevent external script errors from affecting the site
       window.addEventListener('error', function(e) {

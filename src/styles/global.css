@@ -17,6 +17,11 @@
   html.no-flash {
     background-color: transparent;
   }
+  
+  /* Fix h1 font size within section elements */
+  section h1 {
+    font-size: inherit;
+  }
 }
 
 @layer components {
