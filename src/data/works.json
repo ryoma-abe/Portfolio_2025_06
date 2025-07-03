@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "AI Creator Studio",
+    "description": "AI画像生成・編集ツールのSaaSアプリケーション。クレジット制のサブスクリプションモデルで、画像生成、背景削除、画像圧縮などの機能を提供。",
+    "image": "/images/work-ai-creator-studio.png",
+    "link": "https://aisassapp-ryoma-abes-projects.vercel.app/",
+    "technologies": [
+      "Next.js 15.3.4",
+      "React 19.0.0",
+      "TypeScript 5",
+      "Tailwind CSS 4",
+      "Clerk",
+      "Stripe",
+      "Prisma 5.22.0",
+      "TiDB Cloud",
+      "Stability AI"
+    ]
+  },
+  {
+    "id": 2,
     "title": "StreamFlix",
     "description": "映画ストリーミング Web アプリを構築。TMDB API 連携による映画データ取得、Google OAuth 認証、お気に入り管理などを実装し、Next.js + Prisma で高速かつ型安全な UX を実現。",
     "image": "/images/work-streamflix.jpg",
@@ -16,7 +34,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "FUKU COFFEE ROASTERY",
     "description": "コーヒーロースタリーのウェブサイトを構築。ブランドイメージを反映したミニマルなデザインで、商品紹介やオンライン注文機能を実装。",
     "image": "/images/work-fuku-coffee.png",
@@ -24,7 +42,7 @@
     "technologies": ["Shopify"]
   },
   {
-    "id": 8,
+    "id": 4,
     "title": "Rejuve.EC 様",
     "description": "会員制のエクステ販売サイトを制作。会員ランクシステムとInstagram連携を導入。高級感を出しつつ、シンプルで使いやすいデザインで構築。無料テーマを使用し、限られた予算で実装。",
     "image": "/images/work-rejuve-ec.png",
@@ -32,7 +50,7 @@
     "technologies": ["Shopify"]
   },
   {
-    "id": 10,
+    "id": 5,
     "title": "mochimoji",
     "description": "和菓子・お菓子を扱うECサイトを構築。商品の魅力を伝える美しいデザインと使いやすいUI/UXを実現。",
     "image": "/images/work-mochimoji.png",
