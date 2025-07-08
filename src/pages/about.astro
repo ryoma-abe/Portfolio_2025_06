@@ -1,145 +1,195 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 const skills = [
-  { name: 'HTML / CSS', category: 'markup' },
-  { name: 'JavaScript', category: 'language' },
-  { name: 'TypeScript', category: 'language' },
-  { name: 'React', category: 'framework' },
-  { name: 'Next.js', category: 'framework' },
-  { name: 'Astro', category: 'framework' },
-  { name: 'Tailwind CSS', category: 'styling' },
-  { name: 'Node.js', category: 'runtime' },
-  { name: 'Shopify', category: 'platform' },
-  { name: 'Liquid', category: 'template' },
+  { name: "HTML / CSS", category: "markup" },
+  { name: "JavaScript", category: "language" },
+  { name: "TypeScript", category: "language" },
+  { name: "React", category: "framework" },
+  { name: "Next.js", category: "framework" },
+  { name: "Astro", category: "framework" },
+  { name: "Tailwind CSS", category: "styling" },
+  { name: "Node.js", category: "runtime" },
+  { name: "Shopify", category: "platform" },
+  { name: "Liquid", category: "template" },
 ];
 
 const experience = [
-  { 
-    period: '2011年 - 2022年', 
-    company: '陸上自衛隊', 
-    position: '自衛官',
-    description: '11年間の勤務で格闘指導官として部隊の訓練を担当。規律性・責任感・指導力を身につける'
+  {
+    period: "2011年 - 2022年",
+    company: "陸上自衛隊",
+    position: "自衛官",
+    description:
+      "11年間の勤務で格闘指導官として部隊の訓練を担当。<br>規律性・責任感・指導力を身につける。",
   },
-  { 
-    period: '2022年 - 現在', 
-    company: 'フリーランス', 
-    position: 'フロントエンドエンジニア',
-    description: 'Webサイト制作、ECサイト構築、Shopifyカスタマイズ等を手がける。侍エンジニアスクールで講師も務める'
+  {
+    period: "2022年 - 現在",
+    company: "フリーランス",
+    position: "フロントエンドエンジニア",
+    description:
+      "Webサイト制作、ECサイト構築、Shopifyカスタマイズ等を手がける。<br>プログラミングスクールで、Web制作、デザイン、AI講師も務める",
   },
 ];
 
 const philosophy = [
-  { title: 'Vision', description: 'お客様の想いを形にし、価値を最大化する' },
-  { title: 'Technology', description: '最新の技術で高品質なWebサイトを提供' },
-  { title: 'Partnership', description: '長期的な信頼関係を築き、共に成長する' },
+  { title: "Vision", description: "お客様の想いを形にし、価値を最大化する" },
+  { title: "Technology", description: "最新の技術で高品質なWebサイトを提供" },
+  { title: "Partnership", description: "長期的な信頼関係を築き、共に成長する" },
 ];
 ---
 
 <Layout title="About">
   <section class="py-32 relative">
     <!-- Top decorative line -->
-    <div class="absolute top-0 left-0 right-0 h-px bg-gray-200 dark:bg-gray-700"></div>
-    
+    <div
+      class="absolute top-0 left-0 right-0 h-px bg-gray-200 dark:bg-gray-700"
+    >
+    </div>
+
     <div class="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
       <div class="flex items-center gap-8 mb-16">
-        <h1 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code font-mono">
+        <h1
+          class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code font-mono"
+        >
           // PROFILE
         </h1>
         <div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
       </div>
-      
+
       <div class="grid md:grid-cols-2 gap-16 lg:gap-24">
         <div>
-          <h2 class="text-4xl md:text-5xl font-light text-primary dark:text-dark-primary mb-8 leading-tight">
+          <h2
+            class="text-4xl md:text-5xl font-light text-primary dark:text-dark-primary mb-8 leading-tight"
+          >
             コードで未来を<br />デザインする
           </h2>
-          <p class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed mb-6">
-            フロントエンドエンジニアとして、
-            最新の技術とデザインセンスを活かしたWeb制作を行っています。
-            侍エンジニアスクールでの講師活動も通じて、技術の普及にも貢献しています。
+          <p
+            class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed mb-6"
+          >
+            最新の技術を活かしたWeb制作を行っています。<br />
+            プログラムングスクールでの講師活動も通じて、技術の普及にも貢献しています。
           </p>
-          <p class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed">
-            ユーザーエクスペリエンスを重視し、パフォーマンスと美しさを
-            両立したWebサイト・アプリケーションを開発します。
+          <p
+            class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed"
+          >
+            ユーザーエクスペリエンスを重視し、パフォーマンスと美しさを両立したWebサイト・アプリケーションを開発します。
           </p>
         </div>
-        
+
         <div>
-          <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-8 font-mono">
+          <h3
+            class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-8 font-mono"
+          >
             // TECH_STACK
           </h3>
           <div class="space-y-3">
-            {skills.map((skill) => (
-              <div class="flex items-center gap-3">
-                <span class="text-xs font-mono text-accent dark:text-dark-accent w-20">{skill.category}:</span>
-                <span class="text-sm font-medium text-primary dark:text-dark-primary">{skill.name}</span>
-              </div>
-            ))}
+            {
+              skills.map((skill) => (
+                <div class="flex items-center gap-3">
+                  <span class="text-xs font-mono text-accent dark:text-dark-accent w-20">
+                    {skill.category}:
+                  </span>
+                  <span class="text-sm font-medium text-primary dark:text-dark-primary">
+                    {skill.name}
+                  </span>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
-      
+
       <div class="mt-24 md:mt-32">
-        <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono">
+        <h3
+          class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono"
+        >
           // EXPERIENCE
         </h3>
         <div class="relative">
-          <div class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+          <div
+            class="absolute left-4 top-0 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700"
+          >
+          </div>
           <div class="space-y-12 md:space-y-16">
-            {experience.map((item, index) => (
-              <div class="relative pl-12 md:pl-16">
-                <div class="absolute left-0 w-8 h-8 bg-accent dark:bg-dark-accent rounded-full flex items-center justify-center">
-                  <span class="text-xs font-mono text-white">{String(index + 1).padStart(2, '0')}</span>
-                </div>
-                <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 md:p-8">
-                  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                    <span class="text-xs font-mono text-accent dark:text-dark-accent font-semibold">{item.period}</span>
-                    <span class="text-sm font-medium text-primary dark:text-dark-primary mt-1 sm:mt-0">{item.company}</span>
+            {
+              experience.map((item, index) => (
+                <div class="relative pl-12 md:pl-16">
+                  <div class="absolute left-0 w-8 h-8 bg-accent dark:bg-dark-accent rounded-full flex items-center justify-center">
+                    <span class="text-xs font-mono text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
                   </div>
-                  <h4 class="text-lg font-semibold text-primary dark:text-dark-primary mb-3">
-                    {item.position}
-                  </h4>
-                  <p class="text-sm text-secondary dark:text-dark-secondary leading-relaxed">
-                    {item.description}
-                  </p>
+                  <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-6 md:p-8">
+                    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                      <span class="text-xs font-mono text-accent dark:text-dark-accent font-semibold">
+                        {item.period}
+                      </span>
+                      <span class="text-sm font-medium text-primary dark:text-dark-primary mt-1 sm:mt-0">
+                        {item.company}
+                      </span>
+                    </div>
+                    <h4 class="text-lg font-semibold text-primary dark:text-dark-primary mb-3">
+                      {item.position}
+                    </h4>
+                    <p
+                      class="text-sm text-secondary dark:text-dark-secondary leading-relaxed"
+                      set:html={item.description}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
       </div>
-      
+
       <div class="mt-24 md:mt-32">
-        <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono">
+        <h3
+          class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono"
+        >
           // PHILOSOPHY
         </h3>
         <div class="grid md:grid-cols-3 gap-12 lg:gap-16">
-          {philosophy.map((item, index) => (
-            <div class="border-t border-gray-100 dark:border-gray-700 pt-8">
-              <span class="text-xs font-mono text-accent dark:text-dark-accent">[{String(index + 1).padStart(2, '0')}]</span>
-              <h4 class="text-lg font-medium text-primary dark:text-dark-primary mt-4 mb-4">
-                {item.title}
-              </h4>
-              <p class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+          {
+            philosophy.map((item, index) => (
+              <div class="border-t border-gray-100 dark:border-gray-700 pt-8">
+                <span class="text-xs font-mono text-accent dark:text-dark-accent">
+                  [{String(index + 1).padStart(2, "0")}]
+                </span>
+                <h4 class="text-lg font-medium text-primary dark:text-dark-primary mt-4 mb-4">
+                  {item.title}
+                </h4>
+                <p
+                  class="text-sm font-normal text-secondary dark:text-dark-secondary leading-relaxed"
+                  set:html={item.description}
+                />
+              </div>
+            ))
+          }
         </div>
       </div>
-      
+
       <div class="mt-24 md:mt-32">
-        <h3 class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono">
+        <h3
+          class="text-xs font-semibold tracking-[0.3em] text-code dark:text-dark-code mb-12 md:mb-16 font-mono"
+        >
           // ABOUT_THIS_SITE
         </h3>
-        <div class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12">
-          <h4 class="text-lg font-semibold text-primary dark:text-dark-primary mb-6">
+        <div
+          class="bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12"
+        >
+          <h4
+            class="text-lg font-semibold text-primary dark:text-dark-primary mb-6"
+          >
             使用技術
           </h4>
           <div class="grid md:grid-cols-2 gap-8">
             <div>
-              <h5 class="text-xs font-mono text-accent dark:text-dark-accent mb-4">Framework & Build Tool</h5>
+              <h5
+                class="text-xs font-mono text-accent dark:text-dark-accent mb-4"
+              >
+                Framework & Build Tool
+              </h5>
               <ul class="space-y-2">
                 <li class="text-sm text-secondary dark:text-dark-secondary">
                   <span class="font-medium">Astro v4.9.2</span> - 静的サイトジェネレーター
@@ -150,7 +200,11 @@ const philosophy = [
               </ul>
             </div>
             <div>
-              <h5 class="text-xs font-mono text-accent dark:text-dark-accent mb-4">Styling & UI</h5>
+              <h5
+                class="text-xs font-mono text-accent dark:text-dark-accent mb-4"
+              >
+                Styling & UI
+              </h5>
               <ul class="space-y-2">
                 <li class="text-sm text-secondary dark:text-dark-secondary">
                   <span class="font-medium">Tailwind CSS v3.4.1</span> - ユーティリティファーストCSS
@@ -162,7 +216,11 @@ const philosophy = [
             </div>
           </div>
           <div class="mt-8">
-            <h5 class="text-xs font-mono text-accent dark:text-dark-accent mb-4">Hosting & Performance</h5>
+            <h5
+              class="text-xs font-mono text-accent dark:text-dark-accent mb-4"
+            >
+              Hosting & Performance
+            </h5>
             <ul class="space-y-2">
               <li class="text-sm text-secondary dark:text-dark-secondary">
                 <span class="font-medium">GitHub Pages</span> - 高速で安定したホスティング

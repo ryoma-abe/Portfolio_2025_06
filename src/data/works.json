@@ -1,6 +1,20 @@
 [
   {
     "id": 1,
+    "title": "Tech Blog",
+    "description": "フロントエンド開発・Shopifyストア構築・生成AI活用術・フリーランスエンジニアの働き方について発信するテクニカルブログ。WordPressをHeadless CMSとして活用し、高速でSEO最適化されたブログを構築。",
+    "image": "/images/work-tech-blog.png",
+    "link": "https://www.ryoma.online/",
+    "technologies": [
+      "Astro",
+      "TypeScript",
+      "Tailwind CSS",
+      "WordPress (Headless)",
+      "コノハウイング"
+    ]
+  },
+  {
+    "id": 2,
     "title": "AI Creator Studio",
     "description": "AI画像生成・編集ツールのSaaSアプリケーション。クレジット制のサブスクリプションモデルで、画像生成、背景削除、画像圧縮などの機能を提供。",
     "image": "/images/work-ai-creator-studio.png",
@@ -18,7 +32,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "StreamFlix",
     "description": "映画ストリーミング Web アプリを構築。TMDB API 連携による映画データ取得、Google OAuth 認証、お気に入り管理などを実装し、Next.js + Prisma で高速かつ型安全な UX を実現。",
     "image": "/images/work-streamflix.jpg",
@@ -34,7 +48,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "FUKU COFFEE ROASTERY",
     "description": "コーヒーロースタリーのウェブサイトを構築。ブランドイメージを反映したミニマルなデザインで、商品紹介やオンライン注文機能を実装。",
     "image": "/images/work-fuku-coffee.png",
@@ -42,7 +56,7 @@
     "technologies": ["Shopify"]
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "Rejuve.EC 様",
     "description": "会員制のエクステ販売サイトを制作。会員ランクシステムとInstagram連携を導入。高級感を出しつつ、シンプルで使いやすいデザインで構築。無料テーマを使用し、限られた予算で実装。",
     "image": "/images/work-rejuve-ec.png",
@@ -50,7 +64,7 @@
     "technologies": ["Shopify"]
   },
   {
-    "id": 5,
+    "id": 6,
     "title": "mochimoji",
     "description": "和菓子・お菓子を扱うECサイトを構築。商品の魅力を伝える美しいデザインと使いやすいUI/UXを実現。",
     "image": "/images/work-mochimoji.png",
